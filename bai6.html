@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h3>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+</h3>
+
+<script>
+    let doanhSo = prompt("Nhập vào doanh số: ");
+    let hoaHong1 =  500;
+    let hoaHong2 = 200;
+    let luongCung = 5000;
+    let tongThu;
+    if (doanhSo>'10000'){
+        tongThu = luongCung + hoaHong1;
+        alert("Lương cứng: "+luongCung);
+        alert("Tổng lương: "+tongThu)
+    } else if (doanhSo>'5000'){
+        tongThu =  hoaHong2+luongCung;
+        alert("Lương cứng: "+luongCung);
+        alert("Tổng lương: "+tongThu)
+    }else{
+        alert("Tổng lương: "+luongCung)
+    }
+</script>
+</body>
+</html>

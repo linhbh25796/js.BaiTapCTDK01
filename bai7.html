@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h3>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h3>
+
+<!--Thông số :-->
+<!--Phí cố định 50000-->
+<!--600 đồng cuộc gọi 50p' đầu-->
+<!--400 đồng cuộc gọi sau 50p'-->
+<!--200 đồng cuộc gọi sau 150p'-->
+<!--Tính tổng-->
+<script>
+    let cuocCoDinh = 50000;
+    let soPhut = prompt("Nhập vào số phút: ");
+    let tong;
+    document.write("Số phút đã sử dụng: " + soPhut + " phút" +"<br>") ;
+    if (soPhut <= 50) {
+        tong = (soPhut * 600) + cuocCoDinh;
+        document.write("Tổng tiền cước điện thoại của bạn: "+tong+" đồng");
+    }else if(soPhut<=150){
+        tong = ((soPhut-50)*400)+ 50*400 + cuocCoDinh;
+        document.write("Tổng tiền cước điện thoại của bạn: "+tong+" đồng");
+    }else{
+        tong = ((soPhut-150)*200) + 100*400 + 50*600 +cuocCoDinh;
+        document.write("Tổng tiền cước điện thoại của bạn: "+tong+" đồng");
+    }
+
+
+</script>
+</body>
+</html>

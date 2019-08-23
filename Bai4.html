@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h3>Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h3>
+Nhập số nguyên a: <input type="text" id="soA" value=""> <Br>
+Nhập số nguyên b: <input type="text" id="soB" value=""><br>
+Nhập số nguyên c: <input type="text" id="soC" value="">
+<button type="button" onclick="timMax()">Max</button>
+
+<script>
+    function timMax() {
+        let soA = document.getElementById("soA").value;
+        let soB = document.getElementById("soB").value;
+        let soC = document.getElementById("soC").value;
+        if(soA>soB && soA > soC){
+            alert("số a là lớn nhất");
+        }else if(soB>soC){
+            alert("số b là lớn nhất");
+        }else{
+            alert("số c là lớn nhất");
+        }
+    }
+</script>
+</body>
+</html>

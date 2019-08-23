@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h3>
+Nhập số: <input type="text" id="soNguyen" value="">
+<button type="button" onclick="check()">Check</button>
+<script>
+    function check() {
+        let soNguyen = document.getElementById("soNguyen").value;
+        if (soNguyen > 0) {
+            alert(soNguyen + " lớn hơn 0");
+        } else {
+            alert(soNguyen + " nhỏ hơn 0");
+        }
+    }
+</script>
+</body>
+</html>

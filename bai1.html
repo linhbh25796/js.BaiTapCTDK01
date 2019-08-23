@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<h3>Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</h3>
+<form>
+    Nhập vào a: <input type="text" value="" id="soA"><br>
+    Nhập vào b: <input type="text" value="" id="soB">
+    <button type="button" id="btn" onclick="check()">Kiểm tra</button>
+</form>
+<script>
+    function check() {
+        let soA = document.getElementById("soA").value;
+        let soB = document.getElementById("soB").value;
+        if (soA % soB == 0) {
+            alert(+soA + " chia hết cho " + soB);
+        } else {
+            alert(+soA + " không chia hết cho " + soB);
+        }
+    }
+</script>
+</body>
+</html>

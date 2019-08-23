@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h3>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h3>
+Nhập tên sinh viên: <input type="text" id="tenSV"><br>
+Nhập điểm kiểm tra: <input type="text" id="diemTest"><br>
+Nhập điểm thi giữa kỳ: <input type="text" id="diemGiuaKy"><br>
+Nhập điểm thi cuối kỳ: <input type="text" id="diemCuoiKy"><br>
+Xem học lực:
+<button type="button" onclick="tinhToan()">Click</button>
+<br>
+<p id="diem"></p>
+<p id="result"></p>
+
+
+<script>
+    function tinhToan() {
+        let ten = document.getElementById("tenSV").value;
+        let diemTest = document.getElementById("diemTest").value;
+        let diemGiuaKy = document.getElementById("diemGiuaKy").value;
+        let diemCuoiKy = document.getElementById("diemCuoiKy").value;
+        let diemTB = (diemTest * 2 + diemGiuaKy * 2 + diemCuoiKy * 3) / 7;
+        if (diemTB < 5) {
+            document.getElementById("result").innerHTML = "Học sinh: " + ten + "<br>" + "Điểm tổng kết: " + diemTB + "<br>" + "Học lực: " + "Học sinh trung bình";
+
+        } else if (diemTB < 8) {
+            document.getElementById("result").innerHTML = "Học sinh: " + ten + "<br>" + "Điểm tổng kết: " + diemTB + "<br>" + "Học lực: " + "Học sinh khá";
+        } else if (diemTB < 9) {
+            document.getElementById("result").innerHTML = "Học sinh: " + ten + "<br>" + "Điểm tổng kết: " + diemTB + "<br>" + "Học lực: " + "Học sinh giỏi";
+        } else {
+            document.getElementById("result").innerHTML = "Học sinh: " + ten + "<br>" + "Điểm tổng kết: " + diemTB + "<br>" + "Học lực: " + "Học sinh xuất sắc";
+        }
+    }
+</script>
+</body>
+</html>
